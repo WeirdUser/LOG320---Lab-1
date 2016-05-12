@@ -1,9 +1,14 @@
+import java.util.HashMap;
 
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		// Multiply all of the letters' values together,
+		// ignoring spaces, creating a key for each word 
+		// to compare with. Add the key with a counter to 
+		// the HashMap, and add it to the key array.
 		
 		
 	}
@@ -50,11 +55,6 @@ public class Main {
 		
 		// Letter/Number Array goes here.
 		
-		// Multiply all of the letters' values together,
-		// ignoring spaces, creating a key for each word 
-		// to compare with. Add the key with a counter to 
-		// the HashMap, and add it to the key array.
-
 		// For each word to compare, multiply all of the 
 		// letters' values together, just like previously. 
 		// If the resulting key exists, add 1 to the associated 

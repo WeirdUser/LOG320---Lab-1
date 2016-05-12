@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Main {
@@ -9,7 +11,19 @@ public class Main {
 		// ignoring spaces, creating a key for each word 
 		// to compare with. Add the key with a counter to 
 		// the HashMap, and add it to the key array.
-		
+
+		/////////////////////////////////////////
+		// Reading the files
+		/////////////////////////////////////////
+
+		// members
+		FileReaderBasic basicFilereader = new FileReaderBasic();
+		ArrayList<String> listDictionary = (ArrayList<String>) basicFilereader.readDictionary();
+		ArrayList<String> listLines = (ArrayList<String>) basicFilereader.readLines();
+
+		////////////////////////////////////////
+		// Algorithm execution
+		///////////////////////////////////////
 		
 	}
 	

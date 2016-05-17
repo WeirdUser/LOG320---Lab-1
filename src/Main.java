@@ -33,7 +33,8 @@ public class Main {
 		// Calculate the time for each algorithm.
 		
 		//Premier algorithme.
-		//Insert stopwatch here.
+		//stopwatch start.
+		long initialTime = System.nanoTime();
 		for(int i = 0; i < listLines.size(); i++){
 			
 			for(int j = 0; j < listDictionary.size(); j++){
@@ -42,14 +43,30 @@ public class Main {
 			
 			}
 		}
-		
-		//Deuxième algorithme.
-		//Insert stopwatch here.
+		//stopwatch stop.
+		long finalTime = System.nanoTime();
+
+		// console results:
+		System.out.print("time of the first algorithm operation in nanoseconds is = ");
+		System.out.println(finalTime - initialTime);
+
+		//Deuxiï¿½me algorithme.
+		//stopwatch clear & start.
+		initialTime = 0;
+		finalTime = 0;
+		initialTime = System.nanoTime();
 		for(int i = 0; i < listLines.size(); i++){
 			
 			EstUnAnagrammeEfficace((String)listLines.toArray()[i]);
 		
 		}
+
+		//stopwatch stop.
+		finalTime = System.nanoTime();
+
+		// console results:
+		System.out.print("time of the second algorithm operation in nanoseconds is = ");
+		System.out.println(finalTime - initialTime);
 		
 	}
 	

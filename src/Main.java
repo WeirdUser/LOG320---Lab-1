@@ -46,7 +46,6 @@ public class Main {
 		//stopwatch stop.
 		long finalTime = System.nanoTime();
 
-		// console results:
 		System.out.print("time of the first algorithm operation in nanoseconds is = ");
 		System.out.println(finalTime - initialTime);
 
@@ -67,13 +66,32 @@ public class Main {
 		// console results:
 		System.out.print("time of the second algorithm operation in nanoseconds is = ");
 		System.out.println(finalTime - initialTime);
-		
+
+
+		// console results:
+
+		for(int i = 0; i < listDictionary.size();++i){
+			long dictionaryKey = 1;
+			String[] listeArray = (String[])listDictionary.toArray();
+			char[] chaineArray = listeArray[i].toCharArray();
+
+
+			for(int j = 0; j < chaineArray.length; j++){
+
+				dictionaryKey = dictionaryKey * valueMap.get(chaineArray[j]);
+
+			}
+
+			System.out.println("Il y a " + anagramMap.get(dictionaryKey) + " anagrammes du mot " + listeArray[i]);
+
+		}
 	}
 	
 	public static boolean EstUnAnagrammeNaif(String chaine1, String chaine2){
 		boolean found = false;
 		StringBuilder chaine2StringBuild = new StringBuilder(chaine2);
-		
+		chaine1.replace(" ", "");
+		chaine2.replace(" ", "");
 		for(int i = 0; i < chaine1.length(); i++){
 			
 			found = false;
@@ -117,6 +135,7 @@ public class Main {
 		// letters' values together, just like previously. 
 		// If the resulting key exists, add 1 to the associated 
 		// counter in the HashMap.
+		chaine.replace(" ", "");
 		for(int i = 0; i < chaine.length(); i++){
 			
 			dictionaryKey = dictionaryKey * valueMap.get(chaineArray[i]);

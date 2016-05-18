@@ -1,5 +1,6 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class Main {
@@ -72,7 +73,7 @@ public class Main {
 
 		for(int i = 0; i < listDictionary.size();++i){
 			long dictionaryKey = 1;
-			String[] listeArray = (String[])listDictionary.toArray();
+			String[] listeArray = Arrays.copyOf(listDictionary.toArray(), listDictionary.toArray().length, String[].class);
 			char[] chaineArray = listeArray[i].toCharArray();
 
 
@@ -93,21 +94,19 @@ public class Main {
 		chaine1.replace(" ", "");
 		chaine2.replace(" ", "");
 		for(int i = 0; i < chaine1.length(); i++){
-			
+
 			found = false;
 			
 			for(int j = 0; j < chaine2.length(); j++){
-				
-				while(!found){
 					
-					if (chaine1.toCharArray()[i] == chaine2.toCharArray()[j]){
+				if (chaine1.toCharArray()[i] == chaine2.toCharArray()[j]){
 						
-						//Remove char from string
-						chaine2 = chaine2StringBuild.deleteCharAt(j).toString();
-						found = true;
-					}
-					
+					//Remove char from string
+					chaine2 = chaine2StringBuild.deleteCharAt(j).toString();
+					found = true;
+					break;
 				}
+					
 			}
 		}
 		
@@ -129,13 +128,14 @@ public class Main {
 	public static void EstUnAnagrammeEfficace(String chaine){
 		
 		long dictionaryKey = 1;
+		chaine = chaine.replaceAll("\\s+","");
 		char[] chaineArray = chaine.toCharArray();
-		
+		int anagramCounter = 0;
+
 		// For each word to compare, multiply all of the 
 		// letters' values together, just like previously. 
 		// If the resulting key exists, add 1 to the associated 
 		// counter in the HashMap.
-		chaine.replace(" ", "");
 		for(int i = 0; i < chaine.length(); i++){
 			
 			dictionaryKey = dictionaryKey * valueMap.get(chaineArray[i]);
@@ -143,9 +143,14 @@ public class Main {
 		}
 		
 		// With the key array and the HashMap, you now have
-		// a list of how many anagrams exist for each word!
+		// a list of how many anagrams exist for each word.
 
-		anagramMap.put(dictionaryKey, anagramMap.get(dictionaryKey) + 1);
+		try {
+			anagramCounter = anagramMap.get(dictionaryKey) + 1;
+		} catch(Exception e){
+			anagramCounter = 0;
+		}
+		anagramMap.put(dictionaryKey, anagramCounter);
 	}
 	
 	public static void setUpValueMap(){
@@ -189,14 +194,14 @@ public class Main {
 	
 	public static void setUpAnagramMap(ArrayList<String> listDictionary){
 		
-		String[] dictionaryArray = (String[])listDictionary.toArray();
+		String[] dictionaryArray = Arrays.copyOf(listDictionary.toArray(), listDictionary.toArray().length, String[].class);
 		long dictionaryKey = 1;
 		
 		for(int i = 0; i < dictionaryArray.length; i++){
 			
 			for(int j = 0; j < dictionaryArray[i].length(); j++){
 				
-				dictionaryKey = dictionaryKey * valueMap.get(dictionaryArray[j]);
+				dictionaryKey = dictionaryKey * valueMap.get(dictionaryArray[i].charAt(j));
 				
 			}
 			

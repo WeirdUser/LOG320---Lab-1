@@ -190,6 +190,7 @@ public class Main {
 		valueMap.put('7', 139);
 		valueMap.put('8', 149);
 		valueMap.put('9', 151);
+		valueMap.put(' ', 1);
 	}
 	
 	public static void setUpAnagramMap(ArrayList<String> listDictionary){
@@ -198,7 +199,7 @@ public class Main {
 		long dictionaryKey = 1;
 		
 		for(int i = 0; i < dictionaryArray.length; i++){
-			
+
 			for(int j = 0; j < dictionaryArray[i].length(); j++){
 				
 				dictionaryKey = dictionaryKey * valueMap.get(dictionaryArray[i].charAt(j));

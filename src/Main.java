@@ -23,8 +23,8 @@ public class Main {
 
 		// members
 		FileReaderBasic basicFileReader = new FileReaderBasic();
-		ArrayList<String> listDictionary = (ArrayList<String>) basicFileReader.readDictionary();
-		ArrayList<String> listLines = (ArrayList<String>) basicFileReader.readLines();
+		ArrayList<String> listDictionary = (ArrayList<String>) basicFileReader.readDictionary(args[0]);
+		ArrayList<String> listLines = (ArrayList<String>) basicFileReader.readLines(args[1]);
 
 		setUpAnagramMap(listDictionary);
 		/////////////////////////////////////////

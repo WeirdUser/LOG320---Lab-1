@@ -11,18 +11,18 @@ import java.util.ArrayList;
 public class FileReaderBasic {
 
     /** function used to save the dictionary needed for the execution of the algorithm */
-    public Object readDictionary(){
+    public Object readDictionary(String fileName){
 
         // array list of all the values contained in the dictionnary
-        ArrayList<String> lineListDict = createValueTable(getFile());
+        ArrayList<String> lineListDict = createValueTable(fileName);
 
         return lineListDict;
     }
 
     /** function used to save the lines of texts to be analysed */
-    public Object readLines(){
+    public Object readLines(String fileName){
         // array list of all the values to be analysed by the program
-        ArrayList<String> LineListFile = createValueTable(getFile());
+        ArrayList<String> LineListFile = createValueTable(fileName);
 
         return LineListFile;
     }

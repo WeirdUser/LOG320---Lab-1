@@ -33,8 +33,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3830986">
-              <caret line="190" column="31" selection-start-line="190" selection-start-column="31" selection-end-line="190" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.47605634">
+              <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#195#210#0" expanded="true" />
@@ -617,12 +617,12 @@
       <created>1463064932808</created>
       <option name="number" value="Default" />
       <updated>1463064932808</updated>
-      <workItem from="1463064937376" duration="16258000" />
+      <workItem from="1463064937376" duration="17975000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16258000" />
+    <option name="totallyTimeSpent" value="17975000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -669,7 +669,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>81</line>
+          <line>63</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
@@ -695,8 +695,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3830986">
-          <caret line="190" column="31" selection-start-line="190" selection-start-column="31" selection-end-line="190" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.47605634">
+          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#195#210#0" expanded="true" />

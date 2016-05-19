@@ -31,29 +31,11 @@ public class Main {
 		// Algorithm execution
 		/////////////////////////////////////////
 		
-		// Calculate the time for each algorithm.
-		
-		//Premier algorithme.
-		//stopwatch start.
-		long initialTime = System.nanoTime();
-		for(int i = 0; i < listLines.size(); i++){
-			
-			for(int j = 0; j < listDictionary.size(); j++){
-				
-				EstUnAnagrammeNaif((String)listLines.toArray()[i], (String)listDictionary.toArray()[j]);
-			
-			}
-		}
-		//stopwatch stop.
-		long finalTime = System.nanoTime();
-
-		System.out.print("time of the first algorithm operation in nanoseconds is = ");
-		System.out.println(finalTime - initialTime);
-
+		// Calculate the time for the algorithm.
 		//Deuxi�me algorithme.
 		//stopwatch clear & start.
-		initialTime = 0;
-		finalTime = 0;
+		long initialTime = 0;
+		long finalTime = 0;
 		initialTime = System.nanoTime();
 		for(int i = 0; i < listLines.size(); i++){
 			
@@ -91,8 +73,8 @@ public class Main {
 	public static boolean EstUnAnagrammeNaif(String chaine1, String chaine2){
 		boolean found = false;
 		StringBuilder chaine2StringBuild = new StringBuilder(chaine2);
-		chaine1.replace(" ", "");
-		chaine2.replace(" ", "");
+		chaine1 = chaine1.replaceAll("\\s+","");
+		chaine2 = chaine2.replaceAll("\\s+","");
 		for(int i = 0; i < chaine1.length(); i++){
 
 			found = false;

@@ -1,0 +1,9 @@
+diff a/src/Main.java b/src/Main.java	(rejected hunks)
+@@ -31,7 +31,6 @@
+ 		// Algorithm execution
+ 		/////////////////////////////////////////
+ 		
+-		// Calculate the time for each algorithm.
+ 		// Calculate the time for the algorithm.
+ 		//Deuxi�me algorithme.
+ 		//stopwatch clear & start.
